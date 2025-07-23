@@ -26,3 +26,11 @@ pool.query('SELECT NOW()', (err, res) => {
         console.log(`Server running on port ${port}`);
     });
 });
+
+app.get('/', (req, res) => {
+    res.send('Resume Analyzer API is running!');
+});
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
