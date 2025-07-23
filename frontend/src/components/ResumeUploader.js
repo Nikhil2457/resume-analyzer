@@ -37,8 +37,10 @@ function ResumeUploader() {
         const formData = new FormData();
         formData.append('resume', file);
 
+        const API_BASE_URL = 'https://resume-analyzer-backend-rcju.onrender.com';
+
         try {
-            const response = await axios.post('http://localhost:5000/api/resumes/upload', formData, {
+            const response = await axios.post(`${API_BASE_URL}/api/resumes/upload`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setAnalysis(response.data);

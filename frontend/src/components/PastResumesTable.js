@@ -15,11 +15,13 @@ function PastResumesTable() {
     const [searchTerm, setSearchTerm] = useState('');
     const [sortOrder, setSortOrder] = useState('new');
 
+    const API_BASE_URL = 'https://resume-analyzer-backend-rcju.onrender.com';
+
     const fetchResumes = async () => {
         setLoadingTable(true);
         setError('');
         try {
-            const response = await axios.get('http://localhost:5000/api/resumes');
+            const response = await axios.get(`${API_BASE_URL}/api/resumes`);
             setResumes(response.data);
         } catch (err) {
             setError('Failed to fetch resumes');
@@ -41,7 +43,7 @@ function PastResumesTable() {
         setSelectedResume(null);
         setShowModal(true);
         try {
-            const response = await axios.get(`http://localhost:5000/api/resumes/${id}`);
+            const response = await axios.get(`${API_BASE_URL}/api/resumes/${id}`);
             setSelectedResume(response.data);
         } catch (err) {
             setDetailsError('Failed to fetch resume details');
