@@ -1,0 +1,60 @@
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(250,160,133,0.18);
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s;
+}
+
+.animated-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fda085, #f6d365);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  animation: popIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  80% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .animated-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem 0.2rem;
+  }
+  .animated-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,59 @@
+
+.animated-details {
+    animation: fadeIn 1.2s;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(250,160,133,0.13);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+.fade-in {
+    animation: fadeIn 0.8s ease;
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(250,160,133,0.08);
+    margin-bottom: 1rem;
+}
+.skill-badge {
+    animation: popIn 0.5s;
+    background: linear-gradient(90deg, #fda085, #f6d365);
+    color: #fff !important;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(250,160,133,0.08);
+}
+.work-exp-item, .edu-item, .project-item, .cert-item {
+    margin-bottom: 0.7rem;
+    animation: fadeIn 0.8s;
+    background: rgba(250,160,133,0.07);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+.skill-badge:hover, .skill-badge:focus {
+  background: linear-gradient(90deg, #f6d365, #fda085);
+  color: #222 !important;
+  box-shadow: 0 2px 16px rgba(250, 160, 133, 0.18);
+  outline: 2px solid #fda085;
+}
+.fade-in:hover, .fade-in:focus {
+  box-shadow: 0 4px 32px rgba(250,160,133,0.18);
+  outline: 2px solid #fda085;
+}
+
+@media (max-width: 900px) {
+    .animated-details {
+        padding: 1rem 0.5rem;
+    }
+    .fade-in {
+        margin-bottom: 0.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .animated-details {
+        padding: 0.5rem 0.2rem;
+    }
+    .fade-in {
+        margin-bottom: 0.5rem;
+    }
+}
