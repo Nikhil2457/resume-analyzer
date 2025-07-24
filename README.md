@@ -1,5 +1,7 @@
 # Resume Analyzer
 
+- **Deployed Link** :- https://resume-analyzer-sjpz.onrender.com
+
 A full-stack web application that uses AI to analyze resumes, provide feedback, and help users improve their skills. Upload your PDF resume and instantly get:
 
 - **AI-powered resume analysis**
